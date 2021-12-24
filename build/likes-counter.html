@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Шпаргалка по js</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./css/main-style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная страница</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="content">
+          <h1>Как посчитать лайки?</h1>
+          <div class="content-columns">
+            <div class="codebox"><span>window.onload = function () {<span class="indent">let heart = document.querySelector('.heart');</span><span class="indent">
+                  let likesNumber = document.querySelector('.likes-number');</span><br><span class="indent">heart.onclick = function () {<span class="indent-2">if (heart.classList.contains('added')) {<span class="indent-3">likesNumber.textContent--;</span></span><span class="indent-2">} else {<span class="indent-3">likesNumber.textContent++;</span></span><span class="indent-2">}</span><br><span class="indent-2">heart.classList.toggle('added');</span><span>}</span></span><span>}</span></span></div>
+            <div class="heart-example">
+              <button class="heart" type="button"></button><span class="likes-number">9</span>
+            </div>
+          </div>
+        </section>
+        <section class="content">
+          <h3>Что делает этот код?</h3>
+          <ol class="code-description">
+            <li>Объявляет тег с классом<code>.heart</code>переменной<code>heart</code>.</li>
+            <li>Объявляет тег с классом<code>.likes-number</code>переменной<code>likesNumber</code>.</li>
+            <li>Происходит проверка: если у<code>&lt;div class="heart"&gt;</code>есть класс<code>added</code>, то голос вычитается. В противном случае, голос прибавляется.</li>
+            <li>При клике на кнопку с классом<code>.heart</code>добавляется класс<code>.added</code>.</li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>Здесь будущий футер, пока не понятно, что сюда поместить.</p>
+      </div>
+    </footer>
+    <script src="./js/likes-counter.js"></script>
+  </body>
+</html>
