@@ -1,0 +1,31 @@
+.heart-example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.heart {
+  background: transparent url("../images/icon-heart-light.svg") 0 0/contain no-repeat;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  cursor: pointer; }
+  .heart.added {
+    background-image: url("../images/icon-heart-light-added.svg"); }
+
+.likes-number {
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 24px; }
+
+.heart-example {
+  padding: 20px 40px; }
+
+/*# sourceMappingURL=../maps/pages/likes-counter.css.map */
