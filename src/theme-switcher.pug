@@ -1,0 +1,45 @@
+extends templates/layout
+
+block content
+	.container
+
+		section.content
+
+			h1 Как переключить темную и светлую тему?
+
+			.content-columns
+				.codebox
+					span window.onload = function() {
+						span.indent let page = document.querySelector('body');
+						span.indent let themeButton = document.querySelector('.theme-button');
+						span.indent themeButton.onclick = function() {
+						span.indent-2 page.classList.toggle('dark-theme');
+						span.indent }
+						span };
+
+				.btn-example
+					button.theme-button Изменить тему
+
+		section.content
+			h3 Что делает этот код?
+			ol.code-description
+				li Объявляет тег
+					code &lt;body&gt;
+					| переменной
+					code page
+					| .
+				li Объявляет тег с классом
+					code .theme-button
+					| переменной
+					code themeButton
+					| .
+				li При клике на кнопку с классом
+					code .theme-button
+					| у тега
+					code &lt;body&gt;
+					| добавляется класс
+					code .dark-theme
+					| .
+
+block script
+	script(src="js/theme-switcher.js")

@@ -1,12 +1,8 @@
 {
   "menu": [
     {
-      "url": "about.html",
-      "title": "About"
-    },
-    {
-      "url": "catalog.html",
-      "title": "Catalog"
+      "url": "index.html",
+      "title": "Главная страница"
     }
   ]
 }

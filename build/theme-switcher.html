@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Шпаргалка по js</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/main-style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная страница</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="content">
+          <h1>Как переключить темную и светлую тему?</h1>
+          <div class="content-columns">
+            <div class="codebox"><span>window.onload = function() {<span class="indent">let page = document.querySelector('body');</span><span class="indent">let themeButton = document.querySelector('.theme-button');</span><span class="indent">themeButton.onclick = function() {</span><span class="indent-2">page.classList.toggle('dark-theme');</span><span class="indent">}</span><span>};</span></span></div>
+            <div class="btn-example">
+              <button class="theme-button">Изменить тему</button>
+            </div>
+          </div>
+        </section>
+        <section class="content">
+          <h3>Что делает этот код?</h3>
+          <ol class="code-description">
+            <li>Объявляет тег<code>&lt;body&gt;</code>переменной<code>page</code>.</li>
+            <li>Объявляет тег с классом<code>.theme-button</code>переменной<code>themeButton</code>.</li>
+            <li>При клике на кнопку с классом<code>.theme-button</code>у тега<code>&lt;body&gt;</code>добавляется класс<code>.dark-theme</code>.</li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>Здесь будущий футер, пока не понятно, что сюда поместить.</p>
+      </div>
+    </footer>
+    <script src="js/theme-switcher.js"></script>
+  </body>
+</html>

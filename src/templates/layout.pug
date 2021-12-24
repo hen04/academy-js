@@ -4,20 +4,26 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="ie=edge")
-		title Пример для быстрого старта проекта
+		title Шпаргалка по js
 		meta(name="description" content="")
 		meta(name="keywords" content="")
-		script(src="js/main-script.js")
 		link(rel="stylesheet" href="css/main-style.css")
 
 	body
 		header
-			nav
-				ul
-					each item in menu
-						li
-							a(href= item.url)= item.title
-			button.theme-button Изменить тему
+			.container
+				nav
+					ul
+						each item in menu
+							li
+								a(href= item.url)= item.title
+
 		main
 			block content
-		footer Футер
+
+		footer
+			.container
+				p Здесь будущий футер, пока не понятно, что сюда поместить.
+
+
+		block script

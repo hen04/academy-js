@@ -58,7 +58,7 @@ const cleanBuild = () => {
 }
 
 const watch = () => {
-    gulp.watch('src/*.pug', html)
+    gulp.watch(['src/**/*.pug', 'src/*.pug'], html)
     gulp.watch('src/styles/**/*.scss', styles)
     gulp.watch('src/js/**/*.js', scripts)
     gulp.watch('src/images/**/*.*', images)

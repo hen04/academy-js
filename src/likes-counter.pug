@@ -1,0 +1,57 @@
+extends templates/layout
+
+block content
+	.container
+
+		section.content
+
+			h1 Как посчитать лайки?
+			.content-columns
+				.codebox
+					span window.onload = function () {
+						span.indent let heart = document.querySelector('.heart');
+						span.indent let likesNumber = document.querySelector('
+							| .likes-number');
+						br
+						span.indent heart.onclick = function () {
+							span.indent-2 if (heart.classList.contains('added')) {
+								span.indent-3 likesNumber.textContent--;
+							span.indent-2 } else {
+								span.indent-3 likesNumber.textContent++;
+							span.indent-2 }
+							br
+							span.indent-2 heart.classList.toggle('added');
+							span }
+						span }
+
+				.heart-example
+					button.heart(type="button")
+					span.likes-number 9
+
+
+		section.content
+			h3 Что делает этот код?
+			ol.code-description
+				li Объявляет тег с классом
+					code .heart
+					| переменной
+					code heart
+					| .
+				li Объявляет тег с классом
+					code .likes-number
+					| переменной
+					code likesNumber
+					| .
+				li Происходит проверка: если у
+					code &lt;div class="heart"&gt;
+					| есть класс
+					code added
+					|, то голос вычитается. В противном случае, голос прибавляется.
+				li При клике на кнопку с классом
+					code .heart
+					| добавляется класс
+					code .added
+					| .
+
+block script
+	script(src="js/likes-counter.js")
