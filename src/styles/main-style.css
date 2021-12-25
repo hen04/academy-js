@@ -1,17 +1,196 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 3 | @import "pages/likes-counter.scss";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   main-style.scss 3:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @import \"pages/likes-counter.scss\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   main-style.scss 3:9  root stylesheet";
+.theme-button {
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 3px;
 }
+
+.heart-example {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  background: transparent url("../images/icon-heart-light.svg") 0 0/contain no-repeat;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  cursor: pointer;
+}
+.heart.added {
+  background-image: url("../images/icon-heart-light-added.svg");
+}
+
+.likes-number {
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  min-width: 24px;
+}
+
+.heart-example {
+  padding: 20px 40px;
+}
+
+form {
+  padding-left: 30px;
+}
+form input {
+  padding: 4px 8px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  border: 1px solid #666666;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  -webkit-appearance: none;
+}
+form input:focus, form input:active {
+  border-color: #3D3D3D;
+  outline: 1px #3D3D3D;
+}
+form button {
+  padding: 8px 16px;
+  background-color: #666666;
+  color: #ffffff;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+form button:hover, form button:active {
+  background-color: #3D3D3D;
+  outline: none;
+}
+
+.comment-inner {
+  display: flex;
+  flex-flow: wrap;
+}
+.comment-inner label {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.block-example {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-color: #fefefe;
+  margin: 0;
+  font: 16px/125% normal Roboto, sans-serif;
+}
+body.dark-theme {
+  background-color: #141414;
+  color: #fff;
+}
+body.dark-theme .theme-button {
+  color: #fff;
+  border-color: #fff;
+}
+body.dark-theme .codebox,
+body.dark-theme code {
+  background-color: #141414;
+  border: 1px solid #f7f4f3;
+}
+body.dark-theme a {
+  color: #f7f4f3;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+header ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+header li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+main {
+  padding-bottom: 64px;
+}
+
+footer {
+  margin-top: auto;
+  border-top: 1px solid #ccc;
+  padding: 32px 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: navy;
+}
+
+ol li,
+ul li {
+  margin-bottom: 8px;
+}
+
+.codebox {
+  background-color: #f7f4f3;
+  display: inline-flex;
+  font-family: monospace;
+  padding: 16px;
+  border-radius: 4px;
+}
+.codebox span {
+  display: block;
+}
+.codebox .indent {
+  text-indent: 20px;
+}
+.codebox .indent-2 {
+  text-indent: 40px;
+}
+.codebox .indent-3 {
+  text-indent: 60px;
+}
+
+.content:not(:first-child) {
+  margin-top: 40px;
+}
+
+code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  padding: 1px 4px 2px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  margin: 0 4px;
+  background-color: #f7f4f3;
+}
+
+.content-columns {
+  display: flex;
+}
+
+.btn-example {
+  padding: 20px 40px;
+}
+
+/*# sourceMappingURL=main-style.css.map */
