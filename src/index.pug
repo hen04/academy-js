@@ -1,5 +1,9 @@
 extends templates/layout
 
+block style
+	link(rel="stylesheet" href="./css/main-style.css")
+
+
 block content
 	.container
 		h1 Шпаргалки по js
@@ -12,4 +16,6 @@ block content
 					a(href="likes-counter.html") подсчет лайков (условия)
 				li
 					a(href="news-comments.html") комментарии
+				li
+					a(href="todo-list.html") список задач
 

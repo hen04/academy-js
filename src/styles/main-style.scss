@@ -1,8 +1,4 @@
 @import "_variables";
-@import "pages/theme-switcher.scss";
-@import "pages/likes-counter.scss";
-@import "pages/news-comments.scss";
-
 
 body {
   display: flex;
@@ -89,6 +85,7 @@ ul {
   font-family: monospace;
   padding: 16px;
   border-radius: 4px;
+  width: 50%;
 
   span {
     display: block;

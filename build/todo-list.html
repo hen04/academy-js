@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Шпаргалка по js</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./css/pages/todo-list.css">
+    <link rel="stylesheet" href="./css/main-style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная страница</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="content">
+          <h1>Список задач</h1>
+          <div class="content-columns">
+            <div class="codebox"><span>window.onload = function() {<span class="indent">let list = document.querySelector('.todo-list');</span><span class="indent">let input = document.querySelector('.todo-input');</span><span class="indent">let form = document.querySelector('.todo-form');</span><span class="indent">let priority = document.querySelector('.todo-priority');</span><span class="indent">let priorityClass;</span><br><span class="indent">priority.onclick = function () {</span><span class="indent-2">priority.classList.toggle('is-important');</span><br><span class="indent-2">
+                  if (priority.classList.contains('is-important'))&nbsp;{</span><span class="indent-3">priority.textContent = 'Важная задача';</span><span class="indent-2">} else {</span><span class="indent-3">priority.textContent = 'Обычная задача';</span><span class="indent-2">}</span><br><span class="indent-2">priorityClass = priority.classList;</span><span class="indent">}</span><br><span class="indent">form.onsubmit = function (evt) {</span><span class="indent-2">evt.preventDefault();</span><br><span class="indent-2">let newElement = document.createElement('li');</span><br><span class="indent-2">
+                  if (!priority.classList.contains(priorityClass))&nbsp;{</span><span class="indent-3">newElement.classList.add('is-important');</span><span class="indent-2">}</span><br><span class="indent-2">newElement.textContent = input.value;</span><span class="indent-2">input.value = '';</span><br><span class="indent-2">list.append(newElement);</span><span class="indent">};</span><span>};</span></span></div>
+            <div class="block-example">
+              <div class="block-example__top">
+                <h1 class="heading">Список задач</h1>
+                <ol class="todo-list">
+                  <li>Договориться о встрече</li>
+                  <li class="is-important">Поесть</li>
+                </ol>
+              </div>
+              <div class="block-example__form">
+                <form class="todo-form" action="https://echo.htmlacademy.ru/courses" method="post">
+                  <div class="block-example__task">
+                    <label class="input-label" for="todo-input">Добавьте задачу</label>
+                    <input class="todo-input" type="text" id="todo-input" required="">
+                    <button class="todo-priority is-important" type="button">
+                      Важная задача</button>
+                  </div>
+                  <button class="todo-add" type="submit">Добавить в список</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content">
+          <h3>Что делает этот код?</h3>
+          <ol class="code-description">
+            <li>
+              Присваивает переменные основным блокам: списку задач, полю ввода задачи, форме, кнопке с приоритетом задачи.</li>
+            <li>Функция priority переключает класс<code>is-important</code> у кнопки Важная/Обычная задача. И меняет текст в кнопке.</li>
+            <li>Функция form создает элемент списка, добавляет к нему класс<code>is-important</code>, если эта кнопка нажата (см. функцию priority).</li>
+            <li>Затем сохраняет значение из текстового поля и очищает его.</li>
+            <li>В самом конце добавляет новую задачу в список.</li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>Здесь будущий футер, пока не понятно, что сюда поместить.</p>
+      </div>
+    </footer>
+    <script src="./js/todo-list.js"></script>
+  </body>
+</html>

@@ -1,5 +1,48 @@
+form {
+  padding-left: 30px;
+}
+form input {
+  padding: 4px 8px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  border: 1px solid #666666;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  -webkit-appearance: none;
+}
+form input:focus, form input:active {
+  border-color: #3D3D3D;
+  outline: 1px #3D3D3D;
+}
+form button {
+  padding: 8px 16px;
+  background-color: #666666;
+  color: #ffffff;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+form button:hover, form button:active {
+  background-color: #3D3D3D;
+  outline: none;
+}
+
+.comment-inner {
+  display: flex;
+  flex-flow: wrap;
+}
 .comment-inner label {
   display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.block-example {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=news-comments.css.map */
