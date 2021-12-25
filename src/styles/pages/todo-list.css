@@ -1,0 +1,91 @@
+.block-example {
+  width: 50%;
+}
+.block-example__top {
+  padding-left: 20px;
+}
+.block-example__form {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.block-example__form form {
+  display: flex;
+  flex-flow: column;
+}
+.block-example__form input[type=text] {
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+}
+.block-example__task {
+  display: flex;
+  flex-flow: wrap;
+}
+.block-example__task label {
+  display: block;
+  width: 100%;
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5c8bf0;
+}
+.block-example button {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 22px;
+  min-width: 160px;
+  cursor: pointer;
+}
+.block-example button.todo-add {
+  color: #ffffff;
+  margin-top: 6px;
+  background-color: #5c8bf0;
+}
+.block-example button.todo-priority {
+  border: 1px solid #5c8bf0;
+  margin-left: 6px;
+}
+.block-example button.todo-priority.is-important {
+  background-color: #f98f2d;
+  border-color: #f98f2d;
+  color: #ffffff;
+}
+
+.todo-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: todos;
+}
+.todo-list li {
+  margin-top: 1px;
+  padding: 20px 16px;
+  background-color: #ffffff;
+  color: #5c8bf0;
+}
+.todo-list li:before {
+  counter-increment: todos;
+  content: counter(todos);
+  padding: 6px 10px;
+  margin-right: 10px;
+  border: 1px solid #5c8bf0;
+  border-radius: 16px;
+}
+.todo-list li.is-important {
+  color: #ffffff;
+  background-color: #f98f2d;
+}
+.todo-list li.is-important:before {
+  border: none;
+  color: #f98f2d;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=todo-list.css.map */

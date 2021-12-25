@@ -7,14 +7,14 @@
 
 
 .heart {
-  background: transparent url('../images/icon-heart-light.svg') 0 0/contain no-repeat;
+  background: transparent url('../../images/icon-heart-light.svg') 0 0/contain no-repeat;
   width: 32px;
   height: 32px;
   border: 0;
   cursor: pointer;
 
   &.added {
-    background-image: url('../images/icon-heart-light-added.svg');
+    background-image: url('../../images/icon-heart-light-added.svg');
   }
 }
 

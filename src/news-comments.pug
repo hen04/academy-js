@@ -1,5 +1,8 @@
 extends templates/layout
 
+block style
+	link(rel="stylesheet" href="./css/pages/news-comments.css")
+
 block content
 	.container
 
@@ -29,7 +32,7 @@ block content
 				.block-example
 					ol.comment-list
 						li.user-comment Комментарий к статье, который оставил предыдущий
-							| читатель.
+							|  читатель.
 
 					form(action="#" method="get" class="comment-form")
 						.comment-inner

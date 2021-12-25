@@ -1,0 +1,87 @@
+extends templates/layout
+
+block style
+	link(rel="stylesheet" href="./css/pages/todo-list.css")
+
+block content
+	.container
+
+		section.content
+
+			h1 Список задач
+
+			.content-columns
+				.codebox
+					span window.onload = function() {
+						span.indent let list = document.querySelector('.todo-list');
+						span.indent let input = document.querySelector('.todo-input');
+						span.indent let form = document.querySelector('.todo-form');
+						span.indent let priority = document.querySelector('.todo-priority');
+						span.indent let priorityClass;
+						br
+						span.indent priority.onclick = function () {
+						span.indent-2 priority.classList.toggle('is-important');
+						br
+						span.indent-2 if (priority.classList.contains('is-important'))
+							|&nbsp;{
+						span.indent-3 priority.textContent = 'Важная задача';
+						span.indent-2 } else {
+						span.indent-3 priority.textContent = 'Обычная задача';
+						span.indent-2 }
+						br
+						span.indent-2 priorityClass = priority.classList;
+						span.indent }
+						br
+						span.indent form.onsubmit = function (evt) {
+						span.indent-2 evt.preventDefault();
+						br
+						span.indent-2 let newElement = document.createElement('li');
+						br
+						span.indent-2 if (!priority.classList.contains(priorityClass))
+							|&nbsp;{
+						span.indent-3 newElement.classList.add('is-important');
+						span.indent-2 }
+						br
+						span.indent-2 newElement.textContent = input.value;
+						span.indent-2 input.value = '';
+						br
+						span.indent-2 list.append(newElement);
+						span.indent };
+						span };
+
+				.block-example
+					.block-example__top
+						h1(class="heading") Список задач
+
+						ol(class="todo-list")
+							li Договориться о встрече
+							li(class="is-important") Поесть
+
+
+					.block-example__form
+						form(class="todo-form" action="https://echo.htmlacademy.ru/courses"
+							method="post")
+							.block-example__task
+								label(class="input-label" for="todo-input") Добавьте задачу
+								input(type="text" class="todo-input" id="todo-input" required="")
+								button(type="button" class="todo-priority is-important") Важная
+									|  задача
+							button(type="submit" class="todo-add") Добавить в список
+
+
+		section.content
+			h3 Что делает этот код?
+			ol.code-description
+				li Присваивает переменные основным блокам: списку задач, полю
+					|  ввода задачи, форме, кнопке с приоритетом задачи.
+				li Функция priority переключает класс
+					code is-important
+					|  у кнопки Важная/Обычная задача. И меняет текст в кнопке.
+				li Функция form создает элемент списка, добавляет к нему класс
+					code is-important
+					|, если эта кнопка нажата (см. функцию priority).
+				li Затем сохраняет значение из текстового поля и очищает его.
+				li В самом конце добавляет новую задачу в список.
+
+block script
+	script(src="./js/todo-list.js")

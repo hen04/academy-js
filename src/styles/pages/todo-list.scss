@@ -1,0 +1,105 @@
+@import "../_variables.scss";
+
+.block-example {
+  width: 50%;
+
+  &__top {
+    padding-left: 20px;
+  }
+
+  &__form {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    form {
+      display: flex;
+      flex-flow: column;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      box-sizing: border-box;
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__task {
+    display: flex;
+    flex-flow: wrap;
+
+    label {
+      display: block;
+      width: 100%;
+      margin: 0 0 4px;
+      font-size: 14px;
+      line-height: 16px;
+      color: #5c8bf0;
+    }
+  }
+
+  button {
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 22px;
+    min-width: 160px;
+    cursor: pointer;
+
+    &.todo-add {
+      color: $white;
+      margin-top: 6px;
+      background-color: #5c8bf0;
+    }
+
+    &.todo-priority {
+      border: 1px solid #5c8bf0;
+      margin-left: 6px;
+
+      &.is-important {
+        background-color: #f98f2d;
+        border-color: #f98f2d;
+        color: $white;
+      }
+    }
+  }
+}
+
+.todo-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: todos;
+
+  li {
+    margin-top: 1px;
+    padding: 20px 16px;
+    background-color: $white;
+    color: #5c8bf0;
+
+    &:before {
+      counter-increment: todos;
+      content: counter(todos);
+      padding: 6px 10px;
+      margin-right: 10px;
+      border: 1px solid #5c8bf0;
+      border-radius: 16px;
+    }
+
+    &.is-important {
+      color: $white;
+      background-color: #f98f2d;
+
+      &:before {
+        border: none;
+        color: #f98f2d;
+        background-color: $white;
+      }
+    }
+  }
+}
