@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Шпаргалка по js</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./css/main-style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная страница</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="content">
+          <h1>Комментарии для новостей</h1>
+          <div class="content-columns">
+            <div class="codebox"><span>window.onload = function() {<span class="indent">let commentForm = document.querySelector('.comment-form');</span><span class="indent">let commentList = document.querySelector('.comment-list');</span><span class="indent">
+                  let commentField = document.querySelector('.comment-field');</span><br><span class="indent">commentForm.onsubmit = function (evt) {</span><span class="indent-2">evt.preventDefault();</span><br><span class="indent-2">let newComment = document.createElement('li');</span><span class="indent-2">newComment.classList.add('user-comment');</span><span class="indent-2">newComment.textContent = commentField.value;</span><span class="indent-2">commentField.value = '';</span><span class="indent-2">commentList.append(newComment);</span><span class="indent">}</span><span>};</span></span></div>
+            <div class="block-example">
+              <ol class="comment-list">
+                <li class="user-comment">
+                  Комментарий к статье, который оставил предыдущийчитатель.</li>
+              </ol>
+              <form class="comment-form" action="#" method="get">
+                <div class="comment-inner">
+                  <label class="comment-label" for="comment-input">
+                    ваш комментарий</label>
+                  <input class="comment-field" type="text" value="A Java и JavaScript - это одно и то же?" placeholder="Комментарий" required="" id="comment-input">
+                  <button class="button" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="content">
+          <h3>Что делает этот код?</h3>
+          <ol class="code-description">
+            <li>
+              Присваивает переменные основным блокам: форме, списку с комментариями и инпуту, куда пользователь пишет текст.</li>
+            <li>
+              При клике на кнопку Отправить, значения из поля инпут отправляется в блок с комментариями.</li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>Здесь будущий футер, пока не понятно, что сюда поместить.</p>
+      </div>
+    </footer>
+    <script src="./js/news-comments.js"></script>
+  </body>
+</html>

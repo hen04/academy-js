@@ -1,0 +1,55 @@
+@import "../_variables.scss";
+
+form {
+  padding-left: 30px;
+
+  input {
+    padding: 4px 8px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border: 1px solid $gray-40;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    -webkit-appearance: none;
+
+    &:focus,
+    &:active {
+      border-color: $gray-24;
+      outline: 1px $gray-24;
+    }
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: $gray-40;
+    color: #ffffff;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:hover,
+    &:active {
+      background-color: $gray-24;
+      outline: none;
+    }
+  }
+}
+
+.comment-inner {
+  display: flex;
+  flex-flow: wrap;
+
+  label {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.block-example {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}

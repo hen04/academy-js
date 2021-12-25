@@ -1,0 +1,54 @@
+form {
+  padding-left: 30px; }
+  form input {
+    padding: 4px 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    border: 1px solid #666666;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    -webkit-appearance: none; }
+    form input:focus, form input:active {
+      border-color: #3D3D3D;
+      outline: 1px #3D3D3D; }
+  form button {
+    padding: 8px 16px;
+    background-color: #666666;
+    color: #ffffff;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+    form button:hover, form button:active {
+      background-color: #3D3D3D;
+      outline: none; }
+
+.comment-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap; }
+  .comment-inner label {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500; }
+
+.block-example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+/*# sourceMappingURL=../maps/pages/news-comments.css.map */

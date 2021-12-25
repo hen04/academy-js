@@ -1,0 +1,58 @@
+extends templates/layout
+
+block content
+	.container
+
+		section.content
+
+			h1 Комментарии для новостей
+
+			.content-columns
+				.codebox
+					span window.onload = function() {
+						span.indent let commentForm = document.querySelector('.comment-form');
+						span.indent let commentList = document.querySelector('.comment-list');
+						span.indent let commentField = document.querySelector('
+							| .comment-field');
+						br
+						span.indent commentForm.onsubmit = function (evt) {
+						span.indent-2 evt.preventDefault();
+						br
+						span.indent-2 let newComment = document.createElement('li');
+						span.indent-2 newComment.classList.add('user-comment');
+						span.indent-2 newComment.textContent = commentField.value;
+						span.indent-2 commentField.value = '';
+						span.indent-2 commentList.append(newComment);
+						span.indent }
+						span };
+
+				.block-example
+					ol.comment-list
+						li.user-comment Комментарий к статье, который оставил предыдущий
+							| читатель.
+
+					form(action="#" method="get" class="comment-form")
+						.comment-inner
+							label(class="comment-label" for="comment-input") ваш
+								|  комментарий
+
+							input(
+								type="text"
+								class="comment-field"
+								value="A Java и JavaScript - это одно и то же?"
+								placeholder="Комментарий"
+								required=""
+								id="comment-input")
+							button(class="button" type="submit") Отправить
+
+
+		section.content
+			h3 Что делает этот код?
+			ol.code-description
+				li Присваивает переменные основным блокам: форме, списку с
+					|  комментариями и инпуту, куда пользователь пишет текст.
+				li При клике на кнопку Отправить, значения из поля инпут отправляется
+					|  в блок с комментариями.
+
+block script
+	script(src="./js/news-comments.js")
